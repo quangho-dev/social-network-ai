@@ -31,7 +31,7 @@ const CaptionsList = ({ captions, topic }) => {
 
   const handleSaveCaption = async (caption) => {
     try {
-      await axios.post("http://localhost:5000/api/posts/saveGeneratedContent", {
+      await axios.post(`${process.env.REACT_APP_SERVER_URL || 'http://localhost:5000'}/api/posts/saveGeneratedContent`, {
         topic,
         data: caption,
         phoneNumber,

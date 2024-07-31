@@ -46,7 +46,7 @@ const ChooseTopicAndToneScreen = () => {
     }
 
     const res = await axios.post(
-      "http://localhost:5000/api/posts/generatePostCaptions",
+      `${process.env.REACT_APP_SERVER_URL || 'http://localhost:5000'}/api/posts/generatePostCaptions`,
       {
         socialNetwork: socialNetworkName,
         subject: topic,

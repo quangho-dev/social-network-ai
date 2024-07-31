@@ -27,7 +27,11 @@ const ProfileScreen = () => {
     try {
       removePost(id);
 
-      await axios.post(`http://localhost:5000/api/posts/unsaveContent/${id}`);
+      await axios.post(
+        `${
+          process.env.REACT_APP_SERVER_URL || "http://localhost:5000"
+        }/api/posts/unsaveContent/${id}`
+      );
 
       toast.success("Unsaved caption successfully");
     } catch (error) {
@@ -46,7 +50,9 @@ const ProfileScreen = () => {
   useEffect(() => {
     const fetchUserGeneratedContents = async () => {
       const result = await axios.get(
-        `http://localhost:5000/api/posts/getUserGeneratedContents/${localStorage.getItem(
+        `${
+          process.env.REACT_APP_SERVER_URL || "http://localhost:5000"
+        }/api/posts/getUserGeneratedContents/${localStorage.getItem(
           "phoneNumber"
         )}`
       );

@@ -30,7 +30,7 @@ const VerifyAccessCodeScreen = () => {
   const handleVerifyAccessCode = async () => {
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/users/validateAccessCode",
+        `${process.env.REACT_APP_SERVER_URL || 'http://localhost:5000'}/api/users/validateAccessCode`,
         {
           phoneNumber,
           accessCode: +accessCode,

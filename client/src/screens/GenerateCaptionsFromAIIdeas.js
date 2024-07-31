@@ -21,7 +21,7 @@ const GenerateCaptionsFromAIIdeas = () => {
   const handleCreateCaptions = async () => {
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/posts/createCaptionsFromIdeas",
+        `${process.env.REACT_APP_SERVER_URL || 'http://localhost:5000'}/api/posts/createCaptionsFromIdeas`,
         {
           idea: ideaToGenerate,
         }

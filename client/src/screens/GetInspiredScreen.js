@@ -27,7 +27,7 @@ const GetInspiredScreen = () => {
       }
 
       const res = await axios.post(
-        "http://localhost:5000/api/posts/getPostIdeas",
+        `${process.env.REACT_APP_SERVER_URL || 'http://localhost:5000'}/api/posts/getPostIdeas`,
         {
           topic,
         }
