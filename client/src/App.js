@@ -9,8 +9,13 @@ import ChooseTopicAndToneScreen from "./screens/ChooseTopicAndToneScreen";
 import ProfileScreen from "./screens/ProfileScreen";
 import GetInspiredScreen from "./screens/GetInspiredScreen";
 import GenerateCaptionsFromAIIdeas from "./screens/GenerateCaptionsFromAIIdeas";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    localStorage.setItem('phoneNumber', '+84788723027')
+  },[])
+
   return (
     <Router>
       <div className="page-container">
