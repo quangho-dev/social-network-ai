@@ -3,8 +3,6 @@ import "./App.css";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import RegisterPhoneNumberScreen from "./screens/RegisterPhoneNumberScreen";
-import VerifyAccessCodeScreen from "./screens/VerifyAccessCodeScreen";
 import DashboardScreen from "./screens/DashboardScreen";
 import ChooseSocialNetworkScreen from "./screens/ChooseSocialNetworkScreen";
 import ChooseTopicAndToneScreen from "./screens/ChooseTopicAndToneScreen";
