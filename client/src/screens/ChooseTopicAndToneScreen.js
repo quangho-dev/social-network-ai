@@ -54,7 +54,7 @@ const ChooseTopicAndToneScreen = () => {
       }
     );
 
-    setCaptions(res.data);
+    setCaptions(res.data.captions);
   };
 
   return (
